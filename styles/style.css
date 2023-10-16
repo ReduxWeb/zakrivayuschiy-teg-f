@@ -46,22 +46,22 @@
   min-block-size: 364px;
 }
 .header__title {
+  margin-block-end: 18px;
+  padding-top: 136px;
   font-size: var(
     --main-title-font-size,
     clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem)
   );
-  padding-top: 136px;
-  margin-block-end: 18px;
   text-align: center;
   text-transform: uppercase;
 }
 .header__text {
+  margin-block-end: 24px;
   font-size: var(
     --title-font-size,
     clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem)
   );
   text-align: center;
-  margin-block-end: 24px;
   text-transform: uppercase;
 }
 .container {
@@ -120,15 +120,16 @@
 /*====================================
   Контент сайта
 ====================================*/
-.content {
-  margin-block-end: 50px;
-}
 .content__post {
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: center;
   gap: 47px;
+  margin: 0;
+  margin-block-end: 50px;
+  padding: 0;
+  list-style-type: none;
 }
 .card {
   background-color: var(--bg-color, #ffffff);
@@ -137,6 +138,7 @@
   display: flex;
   align-items: center;
   border: 2px solid var(--accent-color, #000000);
+  border-bottom: 0px;
   padding: 4px 10px;
   font-size: var(--main-font-size, 18px);
   font-variation-settings: "wght" var(--title-font-weight, 700);
@@ -144,6 +146,7 @@
 .card__poster {
   position: relative;
   border: 2px solid var(--accent-color, #000000);
+  border-bottom: 0px;
 }
 .card__poster-image {
   display: block;
@@ -283,13 +286,13 @@
     contrast(50%);
 }
 /*====================================
-  Футер сайта
+  Кнопка сохранить
 ====================================*/
-.footer {
+.save__container {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-block-end: 100px;
+  margin-block-end: 103px;
 }
 .save-button {
   display: flex;
@@ -313,6 +316,7 @@
   width: clamp(341px, 50%, 357px);
   border: 2px solid var(--accent-color, #000000);
   padding: 31.5px 32.5px 30.5px 26px;
+  overflow: hidden;
   color: var(--accent-color, #000000);
   font-family: var(--accent-font-family, monospace);
   font-size: 14px;
@@ -362,6 +366,13 @@ dialog[open] {
  Адаптив
 ====================================*/
 @media (width <= 376px) {
+  .header {
+    margin: 100px auto 100px auto;
+    min-block-size: 326px;
+  }
+  .header__title {
+    padding-top: 120px;
+  }
   .save-button {
     display: flex;
     flex-direction: column;
