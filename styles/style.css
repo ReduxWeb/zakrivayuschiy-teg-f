@@ -386,4 +386,7 @@ dialog[open] {
     inline-size: 28px;
     block-size: 28px;
   }
+  .dialog__text {
+    max-inline-size: 198px;
+  }
 }
